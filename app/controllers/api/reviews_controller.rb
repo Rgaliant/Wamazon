@@ -11,7 +11,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def create
-    review = @item.review.new(review_params)
+    review = @item.reviews.new(review_params)
 
     if review.save
       render json: review
